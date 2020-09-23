@@ -19,6 +19,7 @@
   --dark-color-alt: #585b60;
   --mainOverlay: rgba(22, 26, 39, 0.7);
   --mainTransition: all 0.3s ease-in;
+  --mainShadow: 0 0.5px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 /* GENERAL RULES */
@@ -36,7 +37,7 @@ body {
   font-weight: normal;
   font-family: "Titillium Web", sans-serif;
   color: var(--dark-color-alt);
-  height: 400rem;
+  height: 900rem;
 }
 
 ul {
@@ -89,6 +90,11 @@ h3 {
   margin: 0 auto;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 section {
   padding: 8rem 0;
 }
@@ -137,10 +143,11 @@ section {
   color: var(--main-color);
   border: 1px solid var(--main-color);
 }
+
 /* Style add to header on scroll */
 .sticky {
   background-color: #fff;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--mainShadow);
   transition: all 0.5s;
 }
 
@@ -583,6 +590,7 @@ header {
   flex: 1;
   margin-right: 3rem;
 }
+
 .skills-img {
   display: block;
   width: 100%;
@@ -630,9 +638,11 @@ header {
 .limit-80 {
   width: 80%;
 }
+
 .limit-95 {
   width: 95%;
 }
+
 .limit-65 {
   width: 65%;
 }
@@ -712,9 +722,96 @@ header {
 .work-item:hover .work-img {
   transform: scale(1.1);
 }
+
 .work-item:hover .overlay-inner {
   opacity: 1;
 }
+
 .work-item:hover .work-overlay {
   background: var(--mainOverlay);
 }
+
+/* END OUR WORKS STYLES */
+
+/* START TESTIMONIALS STYLES */
+.testimonials {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../img/testimonial.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.testimonials-container {
+  position: relative;
+  text-align: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.testimonial {
+  flex: 0 0 100%;
+}
+
+.client-img-container {
+  width: 6rem;
+  margin: 0 auto;
+}
+
+.client-img {
+  border-radius: 50%;
+}
+
+.client-name {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+.client-pos {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.client-text {
+  width: 65%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.slider-dots {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.active-dot {
+  background: var(--main-color);
+}
+
+/* END TESTIMONIALS STYLES */
+
+/* START BLOG STYLES */
+.blog-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 0 0 calc(33.333% - 2rem);
+  box-shadow: var(--mainShadow);
+}
+
+.card-info {
+  padding: 2.5rem 1.5rem;
+}
+
+/* END BLOG STYLES */
